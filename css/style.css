@@ -1,0 +1,54 @@
+@font-face {
+	font-family: 'tamilFancy';
+	src: url('../fonts/TAMUni-Tamil195.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/TAMUni-Tamil195.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/TAMUni-Tamil195.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/TAMUni-Tamil195.woff') format('woff'), /* Pretty Modern Browsers */
+		url('../fonts/TAMUni-Tamil195.ttf')  format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/TAMUni-Tamil195.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body {
+	font-family: 'tamilFancy', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #000;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.text-line{
+	color: #0a81d8;
+	white-space: nowrap;
+	word-wrap: break-word;
+	overflow: hidden;
+	width: 100%;
+	-webkit-animation: typingAnimation 4s steps(60, end);
+	-moz-animation: typingAnimation 4s steps(60, end);
+	-ms-animation: typingAnimation 4s steps(60, end);
+	-o-animation: typingAnimation 4s steps(60, end);
+	animation: typingAnimation 4s steps(60, end);
+}
+
+@-webkit-keyframes typingAnimation{
+	from { width: 0; }
+}
+
+@-moz-keyframes typingAnimation{
+	from { width: 0; }
+}
+
+@-ms-keyframes typingAnimation{
+	from { width: 0; }
+}
+
+@-o-keyframes typingAnimation{
+	from { width: 0; }
+}
+
+@keyframes typingAnimation{
+	from { width: 0; }
+}
