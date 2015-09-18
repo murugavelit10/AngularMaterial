@@ -1,6 +1,7 @@
 (function(){
 	var app = angular.module('controllers', []);
 	app.controller('HomeCtrl', ['$scope', '$log', '$window', '$document', function($scope, $log, $window, $document) {
+		debugger;
 		var width, height, realWidth, realHeight, screenRatio, balloonsArray = ['blue-balloon', 'green-balloon', 'orange-balloon', 'pink-balloon', 'red-balloon', 'yellow-balloon'];
 		function prepareScreenParams () {
 			width = screen.height,
@@ -36,12 +37,11 @@
 				if(el.className === 'hidden') {
 					setTimeout(_.bind(function(){
 						el.className = 'text-line line-' + i;
+						if(i === hiddenDivContainer.children.length - 1) {
+							initAutoBgAnim();
+						}
 					}, this), timer);
 					var nextLineStartTime = el.getAttribute('data-next-line-start-time');
-					if(nextLineStartTime === ''){
-						initAutoBgAnim();
-						return false;
-					}
 					timer += Number(nextLineStartTime);
 					return true;
 				}
